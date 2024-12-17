@@ -6,15 +6,54 @@
 
 body {
     height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
     overflow: auto;
     background-color: #eee;
     text-align: center;
     padding: 2rem 1rem;
+    font-family: sans-serif;
+}
+
+.site {
+    margin: 1.2rem 0;
+}
+
+.site a {
+    display: table;
+    margin: .2rem auto;
+    padding: .4rem .6rem;
+    color: #333;
+    background-color: #ddd;
+    border-radius: .5rem;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.site a:hover {
+    background-color: #ccc;
 }
 
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #222;
     }
+    .site a {
+        color: #fff;
+        background-color: #444;
+    }
+    .site a:hover {
+        background-color: #666;
+    }
+    p {
+        color: #ccc;
+    }
+}
+
+a.normal-link {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    background-color: transparent;
+    text-decoration: underline;
 }
